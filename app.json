@@ -1,0 +1,22 @@
+{
+  "id": "ff752833-87f5-46e8-8ab7-86251c660040",
+  "name": "Seminar Module",
+  "publisher": "Peter Soelberg",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "idRange": {
+    "from": 123456700,
+    "to": 123456799
+  }
+}
