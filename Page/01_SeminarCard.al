@@ -90,10 +90,19 @@ actions
         {
             action("Co&mments")
             {
-                /*RunObject=page "Seminar Comment Sheet")
-                RunPageLink = "Table
-                name"=const(seminar),"No."=Field("No.");
-                Image = Comment;*/
+                /*RunObject=page "Seminar Comment Sheet"
+                RunPageLink = "Table name"=const(seminar),
+                            "No."=Field("No.");
+                Image = Comment;
+                
+                Promoted = True;
+                
+                PromotedIsbig = True
+                
+                PromotedOnly = True;*/
+
+
+
             }
         }
     }
