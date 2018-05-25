@@ -285,6 +285,12 @@ table 123456710 "Seminar Registration Header"
             Caption = 'Posting No.';
         }
 
+        field(40; "No. Printed";Integer)
+        {
+            Caption='No. Printed';
+            Editable=false;
+        }
+
     }
 
     keys
@@ -355,6 +361,14 @@ table 123456710 "Seminar Registration Header"
         "Document Date" := WORKDATE;
         SeminarSetup.GET;
         NoSeriesMgt.SetDefaultSeries("Posting No. Series", SeminarSetup."Posted Seminar Reg. Nos.");
+        //lab 8 1-1
+
+        if GetFilter("Seminar No.") <>'' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.")
+            then    
+                Validate("Seminar No.",GetRangeMin("Seminar No."));
+
+        //<< lab 8-1-1        
     end;
 
     local procedure InitRecord();

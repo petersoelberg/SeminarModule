@@ -141,13 +141,11 @@ page 123456734 "Posted Seminar Registration"
                     Navigate: Page Navigate;
 
                 begin
+                    Navigate.SetDoc("Posting Date","No.");
+                    Navigate.Run;
                 end;
 
             }
-
-
-
-
 
             group("&Seminar Registration")
             {
