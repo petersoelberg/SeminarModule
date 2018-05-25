@@ -4,6 +4,10 @@ table 123456718 "Posted Seminar Reg. Header"
 // Chapter 7 - Lab 3-1
     Caption = 'Posted Seminar Reg. Header';
 
+    LookupPageId="Seminar Ledger Entries";
+    DrillDownPageId="Seminar Ledger Entries";
+    
+
     Fields
     {
         Field(1; "No."; Code[20])
