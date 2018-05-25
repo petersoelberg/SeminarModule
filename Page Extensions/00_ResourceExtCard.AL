@@ -16,15 +16,16 @@ pageextension 123456700 CSD_ResourceCardExt extends "Resource Card"
         addafter("Personal Data")
         {
             group(Room)
-             {
-                 field("Maximum Participants"; "CSD_Maximum Participants")
-
-                 {
-
+            {
                 Visible = ShowMaxField;
+                field("Maximum Participants"; "CSD_Maximum Participants")
 
-                 }
-             }
+                {
+
+
+
+                }
+            }
         }
     }
 
@@ -33,14 +34,16 @@ pageextension 123456700 CSD_ResourceCardExt extends "Resource Card"
         // Add changes to page actions here
     }
 
-trigger OnOpenPage();
+    trigger OnOpenPage();
 
-begin
-    ShowMaxField := (Type = Type::Machine);
-    CurrPage.Update(False);
-    
-end;
-    var [InDataSet]
-    ShowMaxField: Boolean;
-        
+    begin
+        ShowMaxField := (Type = Type::Machine);
+        CurrPage.Update(False);
+
+    end;
+
+    var
+        [InDataSet]
+        ShowMaxField: Boolean;
+
 }

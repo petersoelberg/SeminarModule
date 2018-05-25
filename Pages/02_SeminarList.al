@@ -60,6 +60,18 @@ page 123456702 "Seminar List"
         area(Navigation)
 
         {
+        }
+            area(Processing)
+        {
+
+            action("Seminar Registration")
+            {
+
+                RunObject = page "Seminar Registration";
+                RunPageLink = "Seminar No." = field ("No.");
+                RunPageMode = Create;
+                Image = NewTimesheet;
+            }
             group("&Seminar")
 
             {
@@ -69,6 +81,23 @@ page 123456702 "Seminar List"
                     RunPageLink = "Table name" = const (Seminar), "No." = field ("No.");
                     Image = Comment;
 
+                }
+                action("Ledger Entries")
+                {
+                    RunObject = page "Seminar Ledger Entries";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    ShortcutKey = "Ctrl+F7";
+                    Image = WarrantyLedger;
+                }
+                action("&Registration")
+                {
+                    RunObject = page "Seminar Registration List";
+                    RunPageLink = "Seminar no." = field ("No.");
+                    Image = Timesheet;
+                    Promoted = True;
+                    PromotedCategory = Process;
                 }
 
             }
