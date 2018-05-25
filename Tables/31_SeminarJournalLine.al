@@ -1,10 +1,10 @@
-table 123456732 "Seminar Ledger Entry"
+table 123456731 "Seminar Journal Line"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
-    //   Chapter 7 - Lab 1
+    //   Chapter 7 - Lab 1 - 2
     //     - Created new table
 
-    Caption = 'Seminar Ledger Entry';
+    Caption = 'Seminar Journal Line';
 
     fields
     {
@@ -24,6 +24,11 @@ table 123456732 "Seminar Ledger Entry"
         field(4;"Posting Date";Date)
         {
             Caption = 'Posting Date';
+
+            trigger OnValidate();
+            begin
+                Validate("Document Date","Posting Date");
+            end;
         }
         field(5;"Document Date";Date)
         {
@@ -121,7 +126,7 @@ table 123456732 "Seminar Ledger Entry"
         field(31;"Source No.";Code[20])
         {
             Caption = 'Source No.';
-            TableRelation = if (Source Type=const(Seminar)) Seminar;
+            TableRelation = if ("Source Type"=const(Seminar)) Seminar;
         }
         field(32;"Journal Batch Name";Code[10])
         {
@@ -152,8 +157,9 @@ table 123456732 "Seminar Ledger Entry"
         }
     }
 
-    fieldgroups
-    {
-    }
+procedure EmptyLine() : Boolean;
+begin
+    exit(("Seminar No." = '') and (Quantity = 0));
+end;
 }
 

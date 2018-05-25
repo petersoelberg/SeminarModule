@@ -8,7 +8,7 @@ table 123456733 "Seminar Register"
 
     fields
     {
-        field(1;"Entry No.";Integer)
+        field(1;"No.";Integer)
         {
             Caption = 'Entry No.';
         }
@@ -40,7 +40,7 @@ table 123456733 "Seminar Register"
 
             trigger OnLookup();
             var
-                UserMgt : Codeunit "418";
+                UserMgt : Codeunit "User Management";
             begin
                 UserMgt.LookupUserID("User ID");
             end;
@@ -57,7 +57,7 @@ table 123456733 "Seminar Register"
 
     keys
     {
-        key(Key1;"Entry No.")
+        key(Key1;"No.")
         {
         }
         key(Key2;"Creation Date")

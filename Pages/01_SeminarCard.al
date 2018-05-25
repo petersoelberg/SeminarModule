@@ -31,7 +31,7 @@ page 123456701 "Seminar Card"
                 {
                     Caption = 'Seminar Duration';
                 }
-                field(" Minimum Participants "; " Minimum Participants ")
+                field(" Minimum Participants "; "Minimum Participants")
                 {
                     Caption = 'Minimum Participants';
                 }

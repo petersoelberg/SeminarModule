@@ -34,7 +34,7 @@ table 123456701 Seminar
             Caption = 'Seminar Duration';
             DecimalPlaces = 0 : 1;
         }
-        field(40; " Minimum Participants "; Integer)
+        field(40; "Minimum Participants"; Integer)
         {
             Caption = 'Minimum Participants';
         }

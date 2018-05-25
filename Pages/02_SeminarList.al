@@ -30,7 +30,7 @@ page 123456702 "Seminar List"
                 {
 
                 }
-                field(" Minimum Participants "; " Minimum Participants ")
+                field(" Minimum Participants "; "Minimum Participants")
                 {
 
                 }
